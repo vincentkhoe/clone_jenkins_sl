@@ -10,7 +10,7 @@ pipeline {
       steps {
         script {
 
-          Output.hello("Vincent Khoe")
+          Output.hello(this, "Vincent Khoe")
         }
       }
     }
