@@ -1,5 +1,7 @@
 @Library("learn_jenkins_shared_library@master")_
 
+import programming.jenkins.Output;
+
 pipeline {
   agent any
   
@@ -8,6 +10,7 @@ pipeline {
       steps {
         script {
           hello.world()
+          Output.hello("Vincent Khoe")
         }
       }
     }
