@@ -6,11 +6,19 @@ pipeline {
   agent any
   
   stages {
+    stage ("Hello Groovy Lang"){
+      steps {
+        script {
+
+          Output.hello("Vincent Khoe")
+        }
+      }
+    }
+
     stage ("Hello World"){
       steps {
         script {
           hello.world()
-          Output.hello("Vincent Khoe")
         }
       }
     }
