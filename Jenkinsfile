@@ -6,6 +6,14 @@ pipeline {
   agent any
   
   stages {
+    stage ("Multi Parameter"){
+      steps {
+        script {
+          maven(["clean","compile","test","packages"])
+        }
+      }
+    }
+
     stage ("Parameter"){
       steps {
         script {
