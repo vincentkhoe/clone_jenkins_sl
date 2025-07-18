@@ -9,7 +9,7 @@ pipeline {
     stage ("Resources File"){
       steps {
         script {
-          def config = libraryResources("config/build.json")
+          def config = libraryResource("config/build.json")
           echo(config)
         }
       }
