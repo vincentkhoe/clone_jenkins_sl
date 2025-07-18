@@ -9,7 +9,7 @@ pipeline {
     stage ("Multi Parameter"){
       steps {
         script {
-          maven(["clean","compile","test","packages"])
+          maven.multiCall(["clean","compile","test","packages"])
         }
       }
     }
