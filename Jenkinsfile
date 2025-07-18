@@ -6,6 +6,17 @@ pipeline {
   agent any
   
   stages {
+    stage ("Map Parameter"){
+      steps {
+        script {
+          hello.person([
+            firstname: "Vincent",
+            lastname: "Khoe"
+          ])
+        }
+      }
+    }
+
     stage ("Multi Parameter"){
       steps {
         script {
