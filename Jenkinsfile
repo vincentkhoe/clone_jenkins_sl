@@ -6,6 +6,15 @@ pipeline {
   agent any
   
   stages {
+    stage ("Resources File"){
+      steps {
+        script {
+          def config = libraryResources("config/build.json")
+          echo(config)
+        }
+      }
+    }
+
     stage ("Map Parameter"){
       steps {
         script {
